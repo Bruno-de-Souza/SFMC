@@ -1,5 +1,7 @@
 # Salesforce Administrator Marketing Cloud Academy
 
+# Week 1
+
 ## .Marketing Cloud Engagement
 	
 	. How does Salesforce Marketing Cloud help companies create personalized marketing campaigns and what are the benefits of integrating its functionalities? 
@@ -103,37 +105,198 @@
 
 1. What is a key feature of Email Studio's email creation process? 
 
-The key feature of Email Studio's email creation process is the ability to design personalized emails using drag-and-drop tools, allowing marketers to easily create visually appealing and targeted email campaigns without extensive coding knowledge.
+		The key feature of Email Studio's email creation process is the ability to design personalized emails using drag-and-drop tools, allowing marketers to easily create visually appealing and targeted email campaigns without extensive coding knowledge.
 
 2. Which metric specifically measures the percentage of recipients who clicked on links within an email, indicating their engagement with the content? 
 
-The click-through rate (CTR) is the metric that specifically measures the percentage of recipients who clicked on links within an email, indicating their engagement with the content.
+		The click-through rate (CTR) is the metric that specifically measures the percentage of recipients who clicked on links within an email, indicating their engagement with the content.
 
 3. What is the primary purpose of AMPscript in Salesforce Marketing Cloud? 
 
-The primary purpose of AMPscript in Salesforce Marketing Cloud is to create dynamic and personalized content within emails, landing pages, and other marketing materials, allowing marketers to tailor messages based on subscriber data and behavior.
+		The primary purpose of AMPscript in Salesforce Marketing Cloud is to create dynamic and personalized content within emails, landing pages, and other marketing materials, allowing marketers to tailor messages based on subscriber data and behavior.
 
 4. What is a benefit of using audience segmentation in Email Studio? 
 
-Audience segmentation in Email Studio allows marketers to target specific groups of subscribers based on their behaviors, preferences, or demographics, leading to more relevant and effective email campaigns that can increase engagement and conversion rates.
+		Audience segmentation in Email Studio allows marketers to target specific groups of subscribers based on their behaviors, preferences, or demographics, leading to more relevant and effective email campaigns that can increase engagement and conversion rates.
 
 5. How can you ensure high email deliverability? 
 
-To ensure high email deliverability, you can follow best practices such as maintaining a clean email list by regularly removing inactive or invalid addresses, using double opt-in methods to confirm subscriptions, personalizing content to increase engagement, and monitoring sender reputation by adhering to anti-spam regulations and avoiding spammy content. Additionally, implementing proper authentication protocols like SPF, DKIM, and DMARC can help improve deliverability rates.
+		To ensure high email deliverability, you can follow best practices such as maintaining a clean email list by regularly removing inactive or invalid addresses, using double opt-in methods to confirm subscriptions, personalizing content to increase engagement, and monitoring sender reputation by adhering to anti-spam regulations and avoiding spammy content. Additionally, implementing proper authentication protocols like SPF, DKIM, and DMARC can help improve deliverability rates.
 
 6. What is the role of Content Builder in Salesforce Marketing Cloud? 
 
-The role of Content Builder in Salesforce Marketing Cloud is to provide a centralized platform for creating, managing, and personalizing content across various marketing channels, including emails, landing pages, and mobile messages. It allows marketers to design and store reusable content blocks, templates, and dynamic content, streamlining the content creation process and enhancing campaign effectiveness.
+		The role of Content Builder in Salesforce Marketing Cloud is to provide a centralized platform for creating, managing, and personalizing content across various marketing channels, including emails, landing pages, and mobile messages. It allows marketers to design and store reusable content blocks, templates, and dynamic content, streamlining the content creation process and enhancing campaign effectiveness.
 
 7. Which of the following is a strategy to improve email campaign success? 
 
-A strategy to improve email campaign success is to conduct A/B testing on different elements of the email, such as subject lines, content, and call-to-action buttons, to determine which variations yield the best engagement and conversion rates. This data-driven approach allows marketers to optimize their campaigns based on real performance metrics.
+		A strategy to improve email campaign success is to conduct A/B testing on different elements of the email, such as subject lines, content, and call-to-action buttons, to determine which variations yield the best engagement and conversion rates. This data-driven approach allows marketers to optimize their campaigns based on real performance metrics.
 
 8. What is a key factor affecting email deliverability? 
 
-A key factor affecting email deliverability is the sender's reputation, which is influenced by factors such as bounce rates, spam complaints, and engagement levels. Maintaining a positive sender reputation through best practices like list hygiene, relevant content, and compliance with anti-spam regulations is crucial for ensuring that emails reach recipients' inboxes rather than being filtered as spam.
+		A key factor affecting email deliverability is the sender's reputation, which is influenced by factors such as bounce rates, spam complaints, and engagement levels. Maintaining a positive sender reputation through best practices like list hygiene, relevant content, and compliance with anti-spam regulations is crucial for ensuring that emails reach recipients' inboxes rather than being filtered as spam.
 
-Information:
+#### Information:
 
-Go to Marketing Cloud and create an email message using content blocks. 
-When your email is ready, send it using the data extension called “Test_Week01”, which can be found in the “Academy - Week 01” folder on the platform.
+		Go to Marketing Cloud and create an email message using content blocks. 
+		When your email is ready, send it using the data extension called “Test_Week01”, which can be found in the “Academy - Week 01” folder on the platform.
+
+## Week 2
+
+## . Introduction: Data Management in Salesforce Marketing Cloud
+
+		Data management in Salesforce Marketing Cloud involves the processes and tools used to collect, store, and analyze customer data to inform marketing strategies and improve campaign effectiveness. This includes managing data extensions, utilizing data filters and segmentation, and ensuring data quality and compliance with regulations.
+
+### Differences between Subscriber and Contact 
+
+		Subscriber: Refers to an individual who has opted to receive email communications. In the context of Email Studio, a subscriber is identified by a unique email address. Subscriber data is primarily managed through lists and Data Extensions. 
+
+		Contact: A broader concept that encompasses any individual you interact with through any channel in SFMC, not just email. This includes SMS, push notifications, and other channels. Each contact is identified by a Contact Key, which is a unique identifier that may be the same as the Subscriber Key, but not necessarily. 
+
+### SQL in Marketing Cloud
+
+		SQL in Marketing Cloud is used to query and manipulate data within Data Extensions. It allows marketers to perform complex data operations, such as filtering, joining, and aggregating data, to create targeted audience segments and personalized content for campaigns.
+
+		https://trailhead.salesforce.com/content/learn/modules/marketing-cloud-sql?trail_id=marketing-cloud-engagement
+
+		Ex: SELECT SubscriberKey, EmailAddress, FirstName, LastName FROM Subscribers WHERE Status = 'Active';
+
+### Data Views
+
+		Data Views in Marketing Cloud are predefined tables that store information about subscriber interactions, such as email sends, opens, clicks, and unsubscribes. They allow marketers to analyze campaign performance and subscriber behavior using SQL queries.
+
+		https://help.salesforce.com/s/articleView?id=sf.mc_as_data_views.htm&type=5
+
+#### Standard tables
+
+		Standard tables in Marketing Cloud are predefined data structures that store essential information about subscribers, email sends, and campaign performance. These tables include Subscriber, EmailSend, Bounce, Click, Open, and Unsubscribe, among others. They provide a foundation for data analysis and reporting within the platform.
+
+		https://help.salesforce.com/s/articleView?id=sf.mc_as_data_views_standard_tables.htm&type=5
+
+		. Salesforce Data Views: https://help.salesforce.com/s/articleView?id=mktg.mc_as_data_views.htm&type=5
+		. Data Views Relationship: https://sfmarketing.cloud/wp-content/uploads/2022/10/dataviews_2022_v3.jpg
+
+## Automation Studio
+
+		Automation Studio is a powerful tool in Salesforce Marketing Cloud that allows marketers to automate repetitive tasks and processes, such as data imports, exports, and email sends. It provides a visual interface for creating and managing automation workflows, enabling efficient campaign management and data handling.
+
+		https://trailhead.salesforce.com/content/learn/modules/marketing-cloud-automation-studio?trail_id=marketing-cloud-engagement
+
+	
+#### Use Case Example: Automated Welcome Campaign 
+
+		. Objective: Automate the sending of welcome emails to new newsletter subscribers. 
+
+		. Steps: 
+
+		. Data Import: Set up an activity to import new subscribers from an external source, such as a website signup form. 
+
+		. Data Filtering: Create a filtering activity to identify only new subscribers who have not yet received the welcome email. 
+
+		. Email Sending: Set up an email sending activity to automatically trigger a personalized welcome email for each filtered new subscriber. 
+
+		. Data Update: Update the database to mark subscribers who have already received the welcome email, avoiding duplicate sends. 
+
+		. Monitoring and Adjustments: Monitor the automation to ensure emails are being sent correctly and adjust as needed. 
+
+		. This automated flow ensures that all new subscribers receive a welcome communication efficiently and without manual intervention, improving user experience and operational efficiency.
+
+### Marketing Cloud Engagement Data Management
+
+		. https://trailhead.salesforce.com/content/learn/modules/marketing-cloud-data-management
+
+#### Explain the concept of Data Views in SFMC?
+
+		. They are system tables that store data about activities and events related to subscribers and marketing interactions, used for reporting and analysis.	
+
+#### How is SQL used in SFMC?
+
+		. To manipulate and query data in Data Extensions and Data Views, create segments, custom reports, and automate processes.
+
+#### What are some limitations of using SQL in SFMC? 
+
+		. Limited function set, performance limitations, execution time, no support for transactions, join limitations, and no support for subqueries in SELECT.
+
+#### What is the importance of optimizing SQL queries in SFMC?
+
+		. To ensure that queries are executed efficiently, avoiding performance impact due to complex queries or large volumes of data.
+
+#### Detail what this query executes in Salesforce and what problem it might have in the response of this request: 
+
+		.  _Sent: This Data View stores information about sent emails. The query counts the number of distinct emails sent to each subscriber in the last 365 days. _SMSMessageTracking: This Data View stores information about sent SMS messages. The query counts the number of distinct SMS sent to each subscriber in the same period. LEFT JOIN: Used to combine the email and SMS tables with the subscriber table, ensuring that all subscribers are considered, even if they have not received emails or SMS. DATEADD(day, -365, GETDATE()): Filters the records to include only those from the last 365 days. COUNT(DISTINCT ...): Counts the number of distinct email and SMS sends for each subscriber. Problem: Data View does not store data for 365 days.
+
+#### A new consultant developed the following query to meet a demand in Salesforce Marketing Cloud, but it is not working correctly. Identify the error in the query and provide a corrected version that resolves the issue. 
+
+		. CROSS APPLY: It is used to apply the subquery to each row of the Subscribers table, returning the last email open event for each subscriber.  TOP 1: Returns only the first result of the subquery, which is the most recent open event due to the ORDER BY EventDate DESC clause.  In SFMC, you would need to restructure the query to avoid using CROSS APPLY, possibly using joins or subqueries differently to achieve a similar result. 
+
+## . Salesforce Ecosystem 
+
+		1. A company wants to ensure that their customers' email addresses are valid. To do this, when registering a new customer, the company sends a confirmation email. When the customer clicks the confirmation button, the Salesforce Marketing Cloud (SFMC) database is updated to indicate that the email has been validated. Additionally, this validated email information should be reflected in the customer object in Sales Cloud, so the support team has access to accurate contact information. How can we implement this integration between SFMC and Sales Cloud to ensure that email validation is correctly recorded? 
+
+		. We can implement Salesforce Marketing Cloud Connect (MCC) to Sales Cloud by following these steps: 
+			1. **Install and Configure MCC**: Install the Marketing Cloud Connect package in Sales Cloud and configure the connection settings in both platforms, ensuring proper authentication and permissions.
+			2. **Enable Data Synchronization**: Set up synchronized data extensions in Marketing Cloud to automatically pull data from Sales Cloud, ensuring real-time updates.
+			3. **Map Fields**: Map the fields between Sales Cloud objects (e.g., Contact or Lead) and Marketing Cloud data extensions to ensure accurate data flow.
+			4. **Configure Tracking and Reporting**: Enable tracking data to flow back from Marketing Cloud to Sales Cloud, allowing Sales Cloud users to view email engagement metrics.
+			5. **Test the Integration**: Perform end-to-end testing to verify that data synchronization and updates are functioning correctly.
+			6. **Monitor and Maintain**: Regularly monitor the integration for errors and ensure that both systems remain in sync as data changes.
+		
+		. With this implementation, the data between these two Salesforce Clouds will be accurate and updated in real time, ensuring that validated email information is correctly reflected in both systems.
+
+		2.A client noticed that the number of contacts in Salesforce Marketing Cloud (SFMC) is higher than expected, which may result in additional charges. The client uses the email as the subscriberKey in SFMC and recently integrated Marketing Cloud Connect to synchronize the Contact, Account, and Lead objects from Salesforce CRM. What could be the cause of this unexpected increase in the contact base, and how can we resolve this issue?  
+
+		. The cause of the error is probably the e-mail used as the Subscriber Key in SFMC, which is not unique across all objects. When integrating Marketing Cloud Connect, SFMC creates a contact for each record in the synchronized objects (Contact, Account, Lead) that has the same email address. This can lead to multiple contacts with the same email address being created in SFMC, resulting in an unexpected increase in the contact base.
+		. To resolve this issue, we can take the following steps:
+		1. Ensure that the Subscriber Key is set to a unique identifier across all synchronized objects. If email is used as the Subscriber Key, ensure that it is unique for each record.
+		2. Identify and remove duplicate contacts in SFMC based on the email address or other unique identifiers.
+		3. Modify the synchronization settings in Marketing Cloud Connect to prevent the creation of duplicate contacts based on the email address.
+		4. Implement Data Validation**: Set up data validation rules in Salesforce CRM to ensure that email addresses are unique before synchronization with SFMC.
+		5. Regularly monitor the contact base in SFMC to ensure that duplicates do not reoccur.
+
+
+### .Information Week 2
+
+		Your objective is to create in Marketing Cloud platform two data extensions: 
+
+		Contacts Data Extension: This should include the following fields: Email, First Name, Last Name, Phone, Locale, and SubscriberKey. 
+
+		How to do this:
+		1. Log in to Salesforce Marketing Cloud and navigate to Email Studio.
+		2. Go to the "Subscribers" tab and select "Data Extensions."
+		3. Click on "Create" to start a new Data Extension.	
+		4. Name the Data Extension "Contacts" and set the following fields:
+			- Email (Text, Primary Key)
+			- First Name (Text)
+			- Last Name (Text)
+			- Phone (Text)
+			- Locale (Text)
+			- SubscriberKey (Text, Unique Key)
+		5. Set the Data Extension to be "Sendable" and "Testable" if needed.
+		6. Save the Data Extension.
+		7. Populate the Data Extension with sample data or import existing contacts as needed.
+
+		how to populate the Data Extension:
+		1. Navigate to the "Contacts" Data Extension you just created.
+		2. Click on "Records" to view the data.
+		3. Click on "Add Records" to manually enter sample data or use the "Import" option to upload a CSV file with existing contacts.
+		4. If importing, ensure the CSV file has the same field names as defined in the Data Extension.
+
+
+
+		Data Views Extension: Develop this extension to display all email opens from the past two weeks. 
+
+		How to do this:
+		1. Log in to Salesforce Marketing Cloud and navigate to Automation Studio.	
+		2. Create a new Automation and select "SQL Query" as the activity type.
+		3. Name the Automation "Email Opens Last Two Weeks."
+		4. In the SQL Query activity, write a query to select email opens from the past two weeks. For example:
+			```sql
+			SELECT 
+				SubscriberKey, 
+				EventDate 
+			FROM 
+				_Sent 
+			WHERE 
+				EventDate >= DATEADD(day, -14, GETDATE())
+
+		5. Set the target Data Extension to a new Data Extension named "Email Opens Last Two Weeks" with appropriate fields (SubscriberKey, EventDate, EmailName).
+		6. Save the SQL Query activity and add it to the Automation workflow.

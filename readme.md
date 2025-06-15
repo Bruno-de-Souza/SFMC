@@ -140,7 +140,7 @@
 		Go to Marketing Cloud and create an email message using content blocks. 
 		When your email is ready, send it using the data extension called “Test_Week01”, which can be found in the “Academy - Week 01” folder on the platform.
 
-## Week 2
+# Week 2 
 
 ## . Introduction: Data Management in Salesforce Marketing Cloud
 
@@ -148,7 +148,8 @@
 
 ### Differences between Subscriber and Contact 
 
-		Subscriber: Refers to an individual who has opted to receive email communications. In the context of Email Studio, a subscriber is identified by a unique email address. Subscriber data is primarily managed through lists and Data Extensions. 
+		Subscriber: Refers to an individual who has opted to receive email communications. In th
+		e context of Email Studio, a subscriber is identified by a unique email address. Subscriber data is primarily managed through lists and Data Extensions. 
 
 		Contact: A broader concept that encompasses any individual you interact with through any channel in SFMC, not just email. This includes SMS, push notifications, and other channels. Each contact is identified by a Contact Key, which is a unique identifier that may be the same as the Subscriber Key, but not necessarily. 
 
@@ -300,3 +301,157 @@
 
 		5. Set the target Data Extension to a new Data Extension named "Email Opens Last Two Weeks" with appropriate fields (SubscriberKey, EventDate, EmailName).
 		6. Save the SQL Query activity and add it to the Automation workflow.
+
+# Week 3
+
+## . Journey Builder
+
+		. Introduction to Journey Builder: Journey Builder is a powerful tool in Salesforce Marketing Cloud that allows marketers to create personalized, automated customer journeys across multiple channels. It enables the design of complex workflows based on customer interactions and behaviors, ensuring relevant and timely communication.
+		https://trailhead.salesforce.com/content/learn/modules/marketing-cloud-journey-builder?trail_id=marketing-cloud-engagement
+
+### . Benefits of Journey Builder
+
+		. Journey Builder offers several benefits, including:
+		
+			1. **Personalization**: Allows for tailored customer experiences based on individual behaviors and preferences.
+			2. **Automation**: Automates marketing processes, reducing manual effort and increasing efficiency.
+			3. **Multichannel Engagement**: Supports communication across various channels, such as email, SMS, and push notifications.
+			4. **Real-time Data**: Utilizes real-time data to trigger actions and updates within customer journeys.
+			5. **Analytics and Reporting**: Provides insights into journey performance, enabling continuous optimization.
+
+	    . Sucess metrics for Journey Builder can include:
+
+			1. **Engagement Rates**: Measuring open rates, click-through rates, and conversion rates to assess how well customers are interacting with the journey.
+			2. **Customer Retention**: Tracking the number of customers who continue to engage with the brand after completing a journey.
+			3. **Journey Completion**: Monitoring the percentage of customers who successfully complete the entire journey as designed.
+			4. **Time to Conversion**: Analyzing the average time it takes for customers to convert after entering the journey.
+			5. **Customer Satisfaction**: Gathering feedback through surveys or Net Promoter Score (NPS) to evaluate customer satisfaction with the journey experience.
+
+	    , Types of journeys:
+
+			1. Single Send Journey is ideal for one time communications, such as resetting an user password.
+			2. Multi-Step journey is ideal for complex campaigns, where you need to guide your customers through a series of steps, such as onboarding or re-engagement campaigns.
+			3. Transactional Journey is used when you need to send a message triggered by an event, such an password reset.
+
+		1. Explain how Journey Builder's real-time interaction management can enhance customer engagement. 
+		
+		    . The real time interaction tool in SMC, allows the marketers to respond right on time the customer interaction of a campaign. This functionality improves the communications with the customer, wich enhance the customer engagement with the brand.
+		
+		2. Describe the process of setting up a Multi-Step Journey in Journey Builder, including the key steps involved. 
+
+			. To set up a Multi-Step Journey, you can follow these basic steps:
+
+			1. First you need to define the goal and objective of the journey.
+			2. Create a new Journey in the Journey Builder selecting the Multi-Step Journey option.
+			3. You have to add an entry source to your journey, it can be CloudPages, Data Extensions, API Event, etc.
+			4. Add the steps to the journey, such as sending emails, SMS, or push notifications, and configure each step with the desired content and timing.
+			5. Use decision splits to segment the audience based on their behaviors or attributes, allowing for personalized experiences.
+			6. Test the journey to ensure that all steps and conditions work as expected.
+			7. Activate the journey to start sending communications to the audience.
+
+## Automation Studio   
+
+		. Automation Studio is a powerful tool in Salesforce Marketing Cloud that allows marketers to automate repetitive tasks and processes, such as data imports, exports, and email sends. It provides a visual interface for creating and managing automation workflows, enabling efficient campaign management and data handling.
+		
+		https://trailhead.salesforce.com/content/learn/modules/marketing-cloud-automation-studio?trail_id=marketing-cloud-engagement
+
+		. Describe how Automation Studio can enhance the efficiency of marketing operations.
+
+		With Salesforce Marketing Cloud Automation Studio, marketers can automate various marketing processes like "Data Management", using SQL to manipulate and segment data, to precisely target the customer needs. "Automated Workflows", with automated workflows marketers can do a lot of manual tasks with the help of workflows like import data, extract data and so on. "Analytics and Reporting", with this feature marketers can improve their analysis and their strategies for new campaigns. Those are a few of the ways that Automation Studio can help the marketing teams to get the job done effectively.
+
+		. Explain the importance of error handling and notifications in Automation Studio. 
+
+		Using the Error Handling and Notification feature in Automation Studio, can help to identify and monitor the eventual errors in tasks and automation that are executed or executing at the moment. With this feature, the problems can be quickly identified and solved.
+
+
+
+
+## Einstein Features in Marketing Cloud
+
+		. Describe how Einstein Messaging Insights can be used to improve marketing campaigns. 
+
+		This tool can improve the analysis of the messages used in the campaigns. For example, it can identify the cause of a lot of simultaneous unsubscribes, with this data the marketer can improve the content of messages right away, and avoid the same problem in the future. Einstein Messaging Insights can also provide a way for monitoring the results of the campaigns, and with that the marketer can improve the campaigns in real time, avoiding the loss of customers.
+
+		. How can Einstein Content Selection enhance the personalization of marketing campaigns? 
+
+		This Einstein function can analyze the behavior of a subscriber, what they like and do not like. With this information is possible to automate the deliver of the right content to each subscriber. This also offer a better experience to the subscriber, because they will receive only the content that they like, and this will increase the engagement with the brand.
+
+### Information Week 3
+
+		. Data Extension: Create a Data Extension containing a single record with your own email address. 
+
+		. How to do this:
+		1. Log in to Salesforce Marketing Cloud and navigate to Email Studio.
+		2. Go to the "Subscribers" tab and select "Data Extensions."
+		3. Click on "Create" to start a new Data Extension.
+		4. Name the Data Extension "Single Record DE" and set the following fields:
+			- Email (Text, Primary Key)
+			- First Name (Text)
+			- Last Name (Text)
+			- Phone (Text)
+			- Locale (Text)
+			- SubscriberKey (Text, Unique Key)
+		5. Set the Data Extension to be "Sendable" and "Testable" if needed.
+		6. Save the Data Extension.
+		7. Navigate to the "Records" tab within the Data Extension and click on "Add Record."
+		8. Enter your email address and any other required fields (First Name, Last Name, etc.) and save the record.
+
+		. Journey Creation: Design a journey that simulates a product release campaign. Ensure that the journey includes only email activities — this is crucial. Incorporate at least one Einstein block and one flow control block in your journey.
+
+		. How to do this:
+		1. Log in to Salesforce Marketing Cloud and navigate to Journey Builder.
+		2. Click on "Create New Journey" and select "Multi-Step Journey."
+		3. Name the journey "Product Release Campaign."
+		4. Add an entry source, such as a Data Extension or API Event, to trigger the journey.
+		5. Drag and drop an "Email Activity" block to the canvas and configure it with the email content for the product release announcement.
+		6. Add an "Einstein Content Selection" block to personalize the email content based on subscriber preferences.
+		7. Include a "Wait" block to pause the journey for a specified duration (e.g., 1 week) before sending the next email.
+		8. Add another "Email Activity" block for a follow-up email, thanking subscribers for their interest and providing additional product information.
+		9. Use a "Decision Split" block to segment subscribers based on their engagement with the first email (e.g., opened or clicked).
+		10. Add a "Flow Control" block to manage the flow of subscribers who did not engage with the first email, directing them to a re-engagement email.
+		11. Save and activate the journey to start the product release campaign.
+
+# Study Material
+
+	### Email Studio
+		. https://help.salesforce.com/s/articleView?id=sf.mc_es_tracking_overview.htm&type=5
+		. https://trailhead.salesforce.com/pt-BR/content/learn/modules/datorama-reports-for-marketing-cloud?trailmix_creator_id=strailhead&trailmix_slug=prepare-for-your-marketing-cloud-email-specialist-credential 
+
+	### Modile Studio
+		. https://help.salesforce.com/s/articleView?id=mktg.mc_mobile_studio.htm&type=5 
+		. https://help.salesforce.com/s/articleView?id=mktg.mc_jb_whatsapp_chat_messaging.htm&type=5 
+		. https://trailhead.salesforce.com/content/learn/modules/conversations-using-whatsapp-in-journey-builder 
+		. https://trailhead.salesforce.com/pt-BR/content/learn/modules/sms-messaging-with-mobileconnect?trailmix_creator_id=jamesmaas&trailmix_slug=mobile-studio 
+		. https://help.salesforce.com/s/articleView?id=mktg.mc_jb_whatsapp_data_extract.htm&type=5 
+		
+	### Cloudpages
+		. https://help.salesforce.com/s/articleView?id=mktg.mc_cp_cloudpages.htm&type=5 
+
+	### Data Management
+		. https://www.youtube.com/watch?v=ERa987gJiUw&list=PLntZFZH56rSfbiSZAp_8sgoxGDo3vD20A
+		. https://trailhead.salesforce.com/pt-BR/content/learn/modules/marketing-cloud-data-management
+
+	### Salesforce Ecosystem
+		. https://www.youtube.com/watch?v=w_DLq6mVq_w
+		. https://trailhead.salesforce.com/content/learn/modules/marketing-cloud-connect 
+
+	### Journey Builder
+		. https://www.salesforce.com/in/blog/what-is-salesforce-journey-builder/ 
+		. https://www.youtube.com/watch?v=lxI2FR4cR8Q&ab_channel=SalesforceBrasil 
+        . https://help.salesforce.com/s/articleView?id=mktg.mc_jb_journey_builder.htm&type=5 
+        . https://trailhead.salesforce.com/content/learn/modules/journey-builder-basics 
+        . https://trailhead.salesforce.com/content/learn/modules/journey-builder-campaigns?trailmix_creator_id=ehogan&trailmix_slug=journey-builder 
+    	. https://trailhead.salesforce.com/content/learn/trails/manage-campaigns-with-journey-builder 
+        . https://trailhead.salesforce.com/content/learn/modules/journey-prioritization-strategies?trail_id=journey-builder-strategies 
+
+	### Automation Studio
+		. https://help.salesforce.com/s/articleView?id=mktg.mc_as_automation_studio.htm&type=5 
+        . https://help.salesforce.com/s/articleView?id=mktg.mc_as_using_automation_studio_activities.htm&type=5 
+        . https://trailhead.salesforce.com/content/learn/modules/automation-studio-activities 
+        . https://resources.docs.salesforce.com/224/latest/en-us/sfdc/pdf/mc_as_implementation_guide.pdf?_ga=2.259789196.701383578.1744401778-601388420.1742790756 
+
+	### Einstein Features
+	    . https://help.salesforce.com/s/articleView?id=mktg.mc_ees_einstein_feature_overview.htm&type=5 
+        . https://help.salesforce.com/s/articleView?id=mktg.marketing_cloud_einstein.htm&type=5 
+        . https://trailhead.salesforce.com/content/learn/modules/marketing-cloud-einstein-activation-quick-look 
+        . https://trailhead.salesforce.com/content/learn/trails/use-einstein-features-in-marketing-cloud
